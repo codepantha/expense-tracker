@@ -9,7 +9,7 @@ RSpec.describe Group, type: :model do
 
   before do
     Group.create!(user: user, name: 'Shoes', icon: '(^-)')
-    subject.save 
+    subject.save
   end
 
   it 'has accurate number of groups' do

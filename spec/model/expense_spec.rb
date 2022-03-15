@@ -6,11 +6,11 @@ RSpec.describe Expense, type: :model do
   end
 
   subject do
-    Expense.new(user: user, name: 'Bicycle', amount: 25000)
+    Expense.new(user: user, name: 'Bicycle', amount: 25_000)
   end
 
   before do
-    Expense.create!(user: user, name: 'Gucci Jacket', amount: 1300000)
+    Expense.create!(user: user, name: 'Gucci Jacket', amount: 1_300_000)
     subject.save
   end
 

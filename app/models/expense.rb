@@ -5,5 +5,5 @@ class Expense < ApplicationRecord
 
   validates :name, presence: true
   validates :amount, numericality: true
-  validates :amount, presence: { message: 'How much did you spend?'}
+  validates :amount, presence: { message: 'How much did you spend?' }
 end
