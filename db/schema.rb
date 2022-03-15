@@ -24,12 +24,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_15_183513) do
   end
 
   create_table "expenses", force: :cascade do |t|
-    t.bigint "author_id"
+    t.bigint "user_id"
     t.string "name"
     t.decimal "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_expenses_on_author_id"
+    t.index ["user_id"], name: "index_expenses_on_user_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -56,6 +56,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_15_183513) do
 
   add_foreign_key "expense_groups", "expenses"
   add_foreign_key "expense_groups", "groups"
-  add_foreign_key "expenses", "users", column: "author_id"
+  add_foreign_key "expenses", "users"
   add_foreign_key "groups", "users"
 end
