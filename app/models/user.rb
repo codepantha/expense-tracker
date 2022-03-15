@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :groups
   has_many :expenses
+
+  validates :name, presence: { message: 'must not be empty' }
 end
