@@ -1,0 +1,18 @@
+<div class="categories-container">
+  <section class="categories-top">
+    <h2><%= @group.name %></h2>
+    <p><%= @total_expenses %></p>
+  </section>
+  <section class="categories-bottom">
+    <% @expenses.each do |expense| %>
+      <article class="category">
+        <img src=<%= @group.icon %> alt="category-img" class="category-img" />
+        <div class="category-item">
+          <p><%= expense.name %></p>
+          <p>Purchased on <time><%= expense.created_at %></time></p>
+        </div>
+        <p class="price">$<%= expense.amount %></p>
+      </article>
+    <% end %>
+  </section>
+</div>

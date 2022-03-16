@@ -8,7 +8,7 @@
       <% group.expenses.each do |expense| %>
         <% total_expenses += expense.amount %>
       <% end %>
-      <%= link_to group_path(group.id), class: "link" do %>
+      <%= link_to group_expenses_path(group.id), class: "link" do %>
         <article class="category">
           <img src=<%= group.icon %> alt="category-img" class="category-img" />
           <div class="category-item">
