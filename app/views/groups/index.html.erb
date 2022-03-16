@@ -8,14 +8,16 @@
       <% group.expenses.each do |expense| %>
         <% total_expenses += expense.amount %>
       <% end %>
-      <article class="category">
-        <img src=<%= group.icon %> alt="category-img" class="category-img" />
-        <div class="category-item">
-          <p><%= group.name %></p>
-          <p>Purchased on <time><%= group.created_at %></time></p>
-        </div>
-        <p class="price">$<%= total_expenses %></p>
-      </article>
+      <%= link_to group_path(group.id), class: "link" do %>
+        <article class="category">
+          <img src=<%= group.icon %> alt="category-img" class="category-img" />
+          <div class="category-item">
+            <p><%= group.name %></p>
+            <p>Purchased on <time><%= group.created_at %></time></p>
+          </div>
+          <p class="price">$<%= total_expenses %></p>
+        </article>
+      <% end %>
     <% end %>
   </section>
 </div>
