@@ -1,2 +1,21 @@
-<h1>Group#index</h1>
-<p>Find me in app/views/group/index.html.erb</p>
+<div class="categories-container">
+  <section class="categories-top">
+    <h1>Categories</h1>
+  </section>
+  <section class="categories-bottom">
+    <% @groups.each do |group| %>
+      <% total_expenses = 0 %>
+      <% group.expenses.each do |expense| %>
+        <% total_expenses += expense.amount %>
+      <% end %>
+      <article class="category">
+        <img src=<%= group.icon %> alt="category-img" class="category-img" />
+        <div class="category-item">
+          <p><%= group.name %></p>
+          <p>Purchased on <time><%= group.created_at %></time></p>
+        </div>
+        <p class="price">$<%= total_expenses %></p>
+      </article>
+    <% end %>
+  </section>
+</div>
