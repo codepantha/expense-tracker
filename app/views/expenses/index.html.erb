@@ -1,19 +1,21 @@
-<div class="categories-container">
-  <section class="categories-top">
-    <h2><%= @group.name %></h2>
-    <p><%= @total_expenses %></p>
+<div class="page-container">
+  <section class="flex justify-between items-center ph3 bg-white">
+    <p class="light-ash f4"><%= @group.name %></p>
+    <p class="card-price"><%= @total_expenses %></p>
   </section>
-  <section class="categories-bottom">
+  <section class="card-bottom ph2">
     <% @expenses.each do |expense| %>
-      <article class="category">
-        <img src=<%= @group.icon %> alt="category-img" class="category-img" />
-        <div class="category-item">
+      <article class="card pa2 br2 shadow-5 bg-white mv3">
+        <img src=<%= @group.icon %> alt="card-img" class="card-img" />
+        <div class="card-details">
           <p><%= expense.name %></p>
           <p>Purchased on <time><%= expense.created_at %></time></p>
         </div>
-        <p class="price">$<%= expense.amount %></p>
+        <p class="card-price">$<%= expense.amount %></p>
       </article>
     <% end %>
-    <%= link_to "Add transaction", new_group_expense_path, class: "btn" %>
   </section>
+  <div class="add-btn-block">
+    <%= link_to "Add transaction", new_group_expense_path, class: "add-btn link white" %>
+  </div>
 </div>
