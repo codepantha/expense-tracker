@@ -15,7 +15,7 @@
       </article>
     <% end %>
   </section>
-  <div class="add-btn-block">
-    <%= link_to "Add transaction", new_group_expense_path, class: "add-btn link white" %>
-  </div>
+
+  <%= render partial: 'shared/add_button', locals: {message: 'Add expense', path: new_group_expense_path} %>
+  
 </div>
