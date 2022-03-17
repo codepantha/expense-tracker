@@ -1,6 +1,6 @@
 <div class="page-container">
   <section class="card-top bg-white">
-    <h1>Categories</h1>
+    <h1 class="secondary-color">Categories</h1>
   </section>
   <section class="card-bottom ph2">
     <% @groups.each do |group| %>
@@ -22,5 +22,5 @@
   </section>
 
   <%= render partial: 'shared/add_button', locals: {message: 'Add category', path: new_group_path} %>
-  
+
 </div>

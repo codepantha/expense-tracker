@@ -117,3 +117,7 @@
   background-color: var(--main-color);
   padding: 16px;
 }
+
+.secondary-color {
+  color: var(--text-color);
+}
