@@ -19,8 +19,12 @@
     <%= render 'shared/navbar' %>
 
     <main class="wrapper">
-      <p class="notice"><%= notice %></p>
+      <% if notice %>
+        <%= render 'shared/alerts' %>
+      <% end %>
+      
       <p class="alert"><%= alert %></p>
+
       <%= yield %>
     </main>
   </body>
