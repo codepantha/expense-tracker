@@ -1,24 +1,26 @@
-<div class="categories-container">
-  <section class="categories-top">
+<div class="page-container">
+  <section class="card-top bg-white">
     <h1>Categories</h1>
   </section>
-  <section class="categories-bottom">
+  <section class="card-bottom ph2">
     <% @groups.each do |group| %>
       <% total_expenses = 0 %>
       <% group.expenses.each do |expense| %>
         <% total_expenses += expense.amount %>
       <% end %>
       <%= link_to group_expenses_path(group.id), class: "link" do %>
-        <article class="category">
-          <img src=<%= group.icon %> alt="category-img" class="category-img" />
-          <div class="category-item">
+        <article class="card pa2 br2 shadow-5 bg-white mv3">
+          <img src=<%= group.icon %> alt="card-img" class="card-img" />
+          <div class="card-details">
             <p><%= group.name %></p>
             <p>Purchased on <time><%= group.created_at %></time></p>
           </div>
-          <p class="price">$<%= total_expenses %></p>
+          <p class="card-price">$<%= total_expenses %></p>
         </article>
       <% end %>
     <% end %>
-    <%= link_to "Add category", new_group_path, class: "btn" %>
   </section>
+  <div class="add-btn-block">
+    <%= link_to "Add category", new_group_path, class: "add-btn link white" %>
+  </div>
 </div>

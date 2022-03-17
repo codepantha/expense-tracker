@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="nav shadow-4">
   <div class="nav-left">
     <%= link_to @current_page == 'groups' || "" ? 'Home' : 'Back', 
       groups_path, class: 'btn' 
@@ -9,9 +9,9 @@
   </div>
   <div class="nav-right">
     <% if user_signed_in? %>
-      <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "link" %>
+      <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "link white" %>
     <% else %>
-      <%= link_to 'Log in', new_user_session_path, class: "link" %>
+      <%= link_to 'Log in', new_user_session_path, class: "btn" %>
     <% end %>
   </div>
 </nav>

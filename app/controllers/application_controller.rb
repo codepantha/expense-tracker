@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   private
-  
+
   # overwrite the authenticate_user! so that it shows my splash screen
   # instead of sign_in
   def authenticate_user!
