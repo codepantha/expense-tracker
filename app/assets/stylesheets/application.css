@@ -81,6 +81,8 @@
 
 .card-img {
   width: 20%;
+  height: 100px;
+  object-fit: contain;
 }
 
 .card-details {
@@ -115,7 +117,7 @@
 
 .submit {
   border: none;
-  background-color: var(--main-color);
+  background-color: var(--green);
   padding: 16px;
 }
 
