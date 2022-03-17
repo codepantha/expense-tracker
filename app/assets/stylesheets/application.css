@@ -99,3 +99,21 @@
   font-weight: 600;
   color: var(--text-color)
 }
+
+.group-form {
+  background-color: #fff;
+  text-align: center;
+  padding: 0px 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #f2f2f2;
+}
+
+.submit {
+  border: none;
+  background-color: var(--main-color);
+  padding: 16px;
+}
