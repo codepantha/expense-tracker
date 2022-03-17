@@ -108,8 +108,9 @@
 
 .form-input {
   width: 100%;
-  padding: 12px;
+  padding: 18px;
   border: 1px solid #f2f2f2;
+  outline: none;
 }
 
 .submit {
