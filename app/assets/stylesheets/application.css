@@ -124,3 +124,14 @@
 .secondary-color {
   color: var(--text-color);
 }
+
+.login {
+  display: block;
+  background: #fff;
+  text-align: center;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+}
