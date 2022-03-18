@@ -1,0 +1,8 @@
+<div style="color: red">
+  <p><%= pluralize(model.errors.count, "error") %> need to be addressed</p>
+  <ul class="error-list">
+    <% model.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+</div>

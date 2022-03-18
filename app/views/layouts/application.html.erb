@@ -7,12 +7,25 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  
+    <%= render 'shared/navbar' %>
+
+    <main class="wrapper">
+      <% if notice %>
+        <%= render 'shared/alerts' %>
+      <% end %>
+      
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+    </main>
   </body>
 </html>

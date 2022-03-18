@@ -1,0 +1,21 @@
+<div class="page-container">
+  <section class="flex justify-between items-center ph3 bg-white">
+    <p class="light-ash f4"><%= @group.name %></p>
+    <p class="card-price"><%= @total_expenses %></p>
+  </section>
+  <section class="card-bottom ph2">
+    <% @expenses.each do |expense| %>
+      <article class="card pa2 br2 shadow-5 bg-white mv3">
+        <img src=<%= @group.icon %> alt="card-img" class="card-img" />
+        <div class="card-details">
+          <p><%= expense.name %></p>
+          <p class="f7">Purchased <time><%= time_ago_in_words(expense.created_at) %></time></p>
+        </div>
+        <p class="card-price">$<%= expense.amount %></p>
+      </article>
+    <% end %>
+  </section>
+
+  <%= render partial: 'shared/add_button', locals: {message: 'Add expense', path: new_group_expense_path} %>
+  
+</div>
