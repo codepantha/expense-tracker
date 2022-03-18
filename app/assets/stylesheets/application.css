@@ -149,6 +149,6 @@ body {
 .intro-text {
   font-size: 16px;
   line-height: 30px;
-  text-align: left;
+  text-align: justify;
   font-weight: 500;
 }
