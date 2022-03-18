@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
 
   def index
     @group = Group.find(params[:group_id])
-    @expenses = @group.expenses
+    @expenses = @group.expenses.order(created_at: :desc)
     @total_expenses = 0
     @expenses.each { |expense| @total_expenses += expense.amount }
   end
