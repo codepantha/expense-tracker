@@ -1,24 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe 'Groups', type: :request do
-  describe 'GET /index' do
-    it 'returns http success' do
-      get '/group/index'
-      expect(response).to have_http_status(:success)
-    end
+  before :each do
+    @user = User.create(name: 'Prom', email: 'email@test.com', password: '123456')
+    @group = Group.create!(user: @user, name: 'game', icon: 'game_icon')
+    @expense = @group.expenses.create(user: @user, name: 'Legend of the kage', amount: 10)
   end
 
-  describe 'GET /show' do
+  describe 'GET /index' do
     it 'returns http success' do
-      get '/group/show'
-      expect(response).to have_http_status(:success)
+      get groups_path
+      expect(response).to render_template('index')
     end
   end
 
   describe 'GET /new' do
     it 'returns http success' do
-      get '/group/new'
-      expect(response).to have_http_status(:success)
+      get new_group_path
+      expect(response).to render_template('new')
     end
   end
 end
