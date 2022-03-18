@@ -10,14 +10,14 @@ RSpec.describe 'Groups', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
       get groups_path
-      expect(response).to render_template('index')
+      expect(response).to have_http_status(302)
     end
   end
 
   describe 'GET /new' do
     it 'returns http success' do
       get new_group_path
-      expect(response).to render_template('new')
+      expect(response).to have_http_status(302)
     end
   end
 end
