@@ -4,9 +4,9 @@
 
 > ROR app to track your expenses.
 
-![screenshot](./app-pg1.png)
-![screenshot](./app-pg2.png)
-![screenshot](./app-pg3.png)
+![screenshot](./app-pg1.PNG)
+![screenshot](./app-pg2.PNG)
+![screenshot](./app-pg3.PNG)
 
 ExpenseTrackrr is an app built with Ruby on Rails using the MVC architecture. The app allows users to track their expenses while grouping them into categories.
 
