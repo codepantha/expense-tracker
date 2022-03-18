@@ -9,7 +9,7 @@
         <img src=<%= @group.icon %> alt="card-img" class="card-img" />
         <div class="card-details">
           <p><%= expense.name %></p>
-          <p class="f7">Purchased on <time><%= expense.created_at %></time></p>
+          <p class="f7">Purchased <time><%= time_ago_in_words(expense.created_at) %></time></p>
         </div>
         <p class="card-price">$<%= expense.amount %></p>
       </article>

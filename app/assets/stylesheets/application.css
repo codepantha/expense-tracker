@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: var(--font-family)
+  font-family: var(--font-family);
 }
 
 .nav {
@@ -29,7 +29,7 @@ body {
 }
 
 .wrapper {
-  background: #f2f2f2
+  background: #f2f2f2;
 }
 
 .page-title {
@@ -104,13 +104,12 @@ body {
   font-size: 14px;
   text-align: center;
   font-weight: 600;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 .group-form {
   background-color: #fff;
   text-align: center;
-  padding: 0px 0;
 }
 
 .form-input {
