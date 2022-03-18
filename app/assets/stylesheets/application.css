@@ -20,6 +20,7 @@ body {
   background: var(--main-color);
   color: #fff;
   font-size: 16px;
+  z-index: 1;
 }
 
 .card-top {
@@ -30,12 +31,18 @@ body {
 
 .wrapper {
   background: #f2f2f2;
+  min-height: 100vh;
 }
 
 .page-title {
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.page-container {
+  min-height: 100vh;
+  position: relative;
 }
 
 .btn {
@@ -64,7 +71,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 70px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   bottom: 0;
 }
 
