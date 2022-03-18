@@ -14,6 +14,9 @@ class ApplicationController < ActionController::Base
 
   def current_page
     path = request.path.split('/')
+
+    @new_expense = path.last(2) == %w[expenses new]
+
     @current_page = ''
     path.reverse_each do |page|
       # don't return ids and 'new'

@@ -1,8 +1,12 @@
 <nav class="nav shadow-5">
   <div class="nav-left">
-    <%= link_to @current_page == 'groups' || "" ? 'Home' : 'Back', 
-      groups_path, class: 'btn' 
-    %>
+
+    <% unless user_signed_in? %>
+      <%= link_to 'Home', '/', class: 'btn' %>
+    <% else %> 
+      <%= link_to 'Back', @new_expense ? group_expenses_path : groups_path, class: 'btn' %>
+    <% end %>
+
   </div>
   <div class="nav-mid">
     <p class="page-title"><%= @current_page %></p>
