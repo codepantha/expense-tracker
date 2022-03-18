@@ -2,7 +2,7 @@
   <section class="card-top bg-white">
     <h1 class="secondary-color">Expenses</h1>
   </section>
-  <%= form_with(model: @expense, :html => {:class => 'group-form'}, url: group_expenses_path, method: :post) do |f|  %>
+  <%= form_with(model: @expense, :html => {:class => 'group-form', :id => 'expense-form'}, url: group_expenses_path, method: :post) do |f|  %>
     <h2 class="pt3 secondary-color">Add an Expense</h2>
 
     <% if @expense.errors.any? %> 
