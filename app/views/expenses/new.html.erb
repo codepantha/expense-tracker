@@ -1,0 +1,22 @@
+<div class="categories-container">
+  <section class="card-top bg-white">
+    <h1 class="secondary-color">Expenses</h1>
+  </section>
+  <%= form_with(model: @expense, :html => {:class => 'group-form', :id => 'expense-form'}, url: group_expenses_path, method: :post) do |f|  %>
+    <h2 class="pt3 secondary-color">Add an Expense</h2>
+
+    <% if @expense.errors.any? %> 
+      <%= render "shared/errors", model: @expense %>
+    <% end %>
+
+    <div class="input-block">
+      <%= f.text_field :name, placeholder: "Edibles", class: "form-input" %>
+    </div>
+    <div class="input-block">
+      <%= f.text_field :amount, placeholder: "$30.50", class: "form-input" %>
+    </div>
+    <div class="input-block">
+      <%= f.submit class: "btn submit f5 mt4 br2 shadow-5 grow" %>
+    </div>
+  <% end %>
+</div>

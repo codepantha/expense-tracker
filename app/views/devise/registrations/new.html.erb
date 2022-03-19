@@ -1,0 +1,29 @@
+<section class="card-top bg-white">
+  <h2 class="secondary-color">Sign up</h2>
+</section>
+
+<%= form_for(resource, as: resource_name, :html => {:class => 'group-form'}, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-input", placeholder: "John Doe" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input", placeholder: "john@doe.com" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-input", placeholder: "password" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input", placeholder: "confirm password" %>
+  </div>
+
+  <div class="input-block">
+    <%= f.submit "Sign up", class: "btn submit f5 mt4 br2 shadow-5 grow" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

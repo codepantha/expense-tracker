@@ -1,15 +1,161 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+:root {
+  --main-color: #3778c2;
+  --green: #51b523;
+  --text-color: #434b54;
+  --heading: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 10px;
+  background: var(--main-color);
+  color: #fff;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.card-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  background: #f2f2f2;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.page-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.btn {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.ash {
+  color: var(--text-color);
+}
+
+.add-btn-block {
+  display: flex;
+  background: var(--green);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.add-btn {
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  width: 90%;
+  text-align: center;
+  padding: 13px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.card-img {
+  width: 20%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.card-details {
+  width: 43%;
+  text-align: center;
+  color: #717c88;
+}
+
+.light-ash {
+  color: #717c88;
+}
+
+.card-price {
+  width: 30%;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.group-form {
+  background-color: #fff;
+  text-align: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #f2f2f2;
+  outline: none;
+}
+
+.submit {
+  border: none;
+  background-color: var(--green);
+  padding: 16px;
+}
+
+.secondary-color {
+  color: var(--text-color);
+}
+
+.auth-links {
+  display: block;
+  background: #fff;
+  text-align: center;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.logo {
+  width: 300px;
+  height: 300px;
+}
+
+.intro-text {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+  font-weight: 500;
+}

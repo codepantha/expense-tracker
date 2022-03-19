@@ -1,0 +1,26 @@
+<div class="page-container">
+  <section class="card-top bg-white">
+    <h1 class="secondary-color">Categories</h1>
+  </section>
+  <section class="card-bottom ph2">
+    <% @groups.each do |group| %>
+      <% total_expenses = 0 %>
+      <% group.expenses.each do |expense| %>
+        <% total_expenses += expense.amount %>
+      <% end %>
+      <%= link_to group_expenses_path(group.id), class: "link" do %>
+        <article class="card pa2 br2 shadow-5 bg-white mv3">
+          <img src=<%= group.icon %> alt="card-img" class="card-img" />
+          <div class="card-details">
+            <p><%= group.name %></p>
+            <p class="f7">Created <time><%= time_ago_in_words(group.created_at) %> ago</time></p>
+          </div>
+          <p class="card-price">$<%= total_expenses %></p>
+        </article>
+      <% end %>
+    <% end %>
+  </section>
+
+  <%= render partial: 'shared/add_button', locals: {message: 'Add category', path: new_group_path} %>
+
+</div>
