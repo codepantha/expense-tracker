@@ -37,7 +37,7 @@ You need to have followings installed in your local machine:
 To setup the Items Library project in your local, in the repo page: 
 - click on code (dropdown list) > Download as ZIP. 
 - or open terminal of path you want to install project and run this command:
-`git clone git@github.com:codepantherr/expense-tracker.git`
+`git clone git@github.com:codepantha/expense-tracker.git`
 - `cd expense-tracker/`
 - `bundle install`
 - `bin/rails db:create`
@@ -59,14 +59,14 @@ To setup the Items Library project in your local, in the repo page:
 
 👤 **Eze Promise**
 
-- GitHub: [@codepantherr](https://github.com/codepantherr)
+- GitHub: [@codepantha](https://github.com/codepantha)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/promise-eze/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/codepantherr/expense-tracker/issues).
+Feel free to check the [issues page](https://github.com/codepantha/expense-tracker/issues).
 
 ## Show your support
 
