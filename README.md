@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # ExpenseTrackrr
 
 > ROR app to track your expenses.
@@ -11,7 +9,7 @@
 ExpenseTrackrr is an app built with Ruby on Rails using the MVC architecture. The app allows users to track their expenses while grouping them into categories.
 
 ## Live demo
-[www.expensetrackrr.com](https://expensetrackrr.herokuapp.com/)
+[See live demo here](https://expense-tracker-ue87.onrender.com)
 
 ## Built With
 
